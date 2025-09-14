@@ -1,235 +1,222 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EBANA Fidel Plamedi - Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body { font-family: 'Poppins', sans-serif; }
-        html { scroll-behavior: smooth; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EBANA Fidel Plamedi - Portfolio</title>
+  <!-- TailwindCSS & DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.8.1/dist/full.css" rel="stylesheet">
+  <!-- Swiper.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    html { scroll-behavior: smooth; }
+    .bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.5rem; }
+  </style>
 </head>
-<body class="bg-gray-50">
-    <!-- HEADER -->
-    <header class="bg-[#1e293b] text-white p-6 fixed w-full z-10 shadow-lg animate-fade-down animate-duration-1000">
-        <nav class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tight animate-pulse">EBANA FP</div>
-            <ul class="space-x-6 flex">
-                <li><a href="#about" class="hover:text-cyan-400 transition">À propos</a></li>
-                <li><a href="#services" class="hover:text-cyan-400 transition">Services</a></li>
-                <li><a href="#projects" class="hover:text-cyan-400 transition">Projets</a></li>
-                <li><a href="#skills" class="hover:text-cyan-400 transition">Compétences</a></li>
-                <li><a href="#timeline" class="hover:text-cyan-400 transition">Parcours</a></li>
-                <li><a href="#contact" class="hover:text-cyan-400 transition">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bg-gray-900 text-gray-100">
 
-    <main class="pt-28">
-        <!-- HERO -->
-        <section class="bg-gradient-to-b from-[#1e293b] to-cyan-500 text-white h-screen flex items-center justify-center text-center animate-fade-in animate-duration-1500">
-            <div>
-                <img src="https://avatars.githubusercontent.com/u/104888917?v=4" alt="photo profil" class="mx-auto w-36 h-36 rounded-full mb-6 shadow-lg animate-scale-in animate-duration-1000 border-4 border-cyan-400">
-                <h1 class="text-5xl font-semibold mb-2">EBANA Fidel Plamedi</h1>
-                <p class="mt-2 text-lg text-gray-100">Développeur Web & Mobile | Designer Graphique</p>
-                <a href="#contact" class="mt-8 inline-block bg-cyan-400 text-[#1e293b] py-3 px-6 rounded-lg shadow-xl hover:bg-cyan-500 transition-all duration-300 font-semibold animate-bounce">Me contacter</a>
-                <div class="mt-6 flex justify-center space-x-4 text-2xl">
-                    <a href="https://linkedin.com/in/ebanafidel" target="_blank"><i class="fab fa-linkedin hover:text-cyan-300"></i></a>
-                    <a href="https://github.com/ebanafidel" target="_blank"><i class="fab fa-github hover:text-cyan-300"></i></a>
-                    <a href="https://twitter.com/ebanafidel" target="_blank"><i class="fab fa-twitter hover:text-cyan-300"></i></a>
-                    <a href="https://instagram.com/ebanafidel" target="_blank"><i class="fab fa-instagram hover:text-pink-400"></i></a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT -->
-        <section id="about" class="container mx-auto my-16 px-4 animate-fade-in animate-delay-300">
-            <h2 class="text-4xl font-semibold text-[#1e293b] mb-4">À propos de moi</h2>
-            <div class="bg-white rounded-xl shadow-lg p-6 transition-all hover:scale-105">
-                <p class="text-gray-600 text-lg leading-relaxed">
-                    Jeune développeur de 17 ans basé à Brazzaville, je conçois des sites et des applications modernes. Passionné par le design UI/UX et la création d’expériences interactives, je transforme des idées en solutions concrètes.
-                </p>
-            </div>
-        </section>
-
-        <!-- SERVICES -->
-        <section id="services" class="container mx-auto my-16 px-4 animate-fade-in animate-delay-500">
-            <h2 class="text-4xl font-semibold text-[#1e293b] mb-8">Ce que je propose</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-cyan-400">
-                    <i class="fas fa-code text-cyan-500 text-3xl mb-2"></i>
-                    <h3 class="font-bold text-lg mb-2 text-[#1e293b]">Développement Web</h3>
-                    <p class="text-gray-600">Création de sites et applications web responsives, modernes et rapides.</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-cyan-400">
-                    <i class="fas fa-mobile-alt text-cyan-500 text-3xl mb-2"></i>
-                    <h3 class="font-bold text-lg mb-2 text-[#1e293b]">Développement Mobile</h3>
-                    <p class="text-gray-600">Apps Android/iOS, expérience utilisateur optimisée et design natif.</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-pink-400">
-                    <i class="fas fa-paint-brush text-pink-400 text-3xl mb-2"></i>
-                    <h3 class="font-bold text-lg mb-2 text-[#1e293b]">Design Graphique</h3>
-                    <p class="text-gray-600">UI/UX, création de logos, illustrations, maquettes sur Figma & Photoshop.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- PROJECTS (SLIDER) -->
-        <section id="projects" class="my-16 animate-fade-in animate-delay-700">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-semibold text-[#1e293b] mb-8">Projets récents</h2>
-                <div id="slider-card" class="max-w-lg mx-auto bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 border-l-4 border-cyan-400">
-                    <!-- Le contenu de la card s'affichera ici par JS -->
-                </div>
-            </div>
-        </section>
-
-        <!-- SKILLS -->
-        <section id="skills" class="my-16 bg-gray-200 py-8 animate-fade-in animate-delay-900">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-semibold text-[#1e293b] mb-4">Compétences</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <span class="bg-white p-3 rounded-lg shadow text-center text-cyan-500 font-semibold hover:bg-cyan-50 transition">HTML/CSS</span>
-                    <span class="bg-white p-3 rounded-lg shadow text-center text-cyan-500 font-semibold hover:bg-cyan-50 transition">JavaScript</span>
-                    <span class="bg-white p-3 rounded-lg shadow text-center text-cyan-500 font-semibold hover:bg-cyan-50 transition">React.js</span>
-                    <span class="bg-white p-3 rounded-lg shadow text-center text-cyan-500 font-semibold hover:bg-cyan-50 transition">Git/GitHub</span>
-                    <span class="bg-white p-3 rounded-lg shadow text-center text-cyan-500 font-semibold hover:bg-cyan-50 transition">TailwindCSS</span>
-                    <span class="bg-white p-3 rounded-lg shadow text-center text-cyan-500 font-semibold hover:bg-cyan-50 transition">Figma</span>
-                    <span class="bg-white p-3 rounded-lg shadow text-center text-cyan-500 font-semibold hover:bg-cyan-50 transition">Node.js</span>
-                    <span class="bg-white p-3 rounded-lg shadow text-center text-cyan-500 font-semibold hover:bg-cyan-50 transition">Firebase</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- TIMELINE / PARCOURS -->
-        <section id="timeline" class="container mx-auto my-16 px-4 animate-fade-in animate-delay-1100">
-            <h2 class="text-4xl font-semibold text-[#1e293b] mb-8">Mon parcours</h2>
-            <ol class="relative border-l-4 border-cyan-400">
-                <li class="mb-10 ml-6">
-                    <span class="absolute flex items-center justify-center w-8 h-8 bg-cyan-400 rounded-full -left-4 ring-4 ring-white text-white">
-                        <i class="fas fa-graduation-cap"></i>
-                    </span>
-                    <h3 class="font-bold text-lg text-cyan-500">2022 - Lycée Technique</h3>
-                    <p class="text-gray-600">Bac scientifique, Brazzaville.</p>
-                </li>
-                <li class="mb-10 ml-6">
-                    <span class="absolute flex items-center justify-center w-8 h-8 bg-[#1e293b] rounded-full -left-4 ring-4 ring-white text-white">
-                        <i class="fas fa-laptop-code"></i>
-                    </span>
-                    <h3 class="font-bold text-lg text-[#1e293b]">2023 - Freelance</h3>
-                    <p class="text-gray-600">Développeur web/mobile indépendant, réalisation de projets pour particuliers et PME.</p>
-                </li>
-                <li class="ml-6">
-                    <span class="absolute flex items-center justify-center w-8 h-8 bg-pink-400 rounded-full -left-4 ring-4 ring-white text-white">
-                        <i class="fas fa-paint-brush"></i>
-                    </span>
-                    <h3 class="font-bold text-lg text-pink-400">2024 - Designer & Dév</h3>
-                    <p class="text-gray-600">Création de maquettes, logos, interfaces pour startups et associations.</p>
-                </li>
-            </ol>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact" class="container mx-auto my-16 px-4 animate-fade-in animate-delay-1300">
-            <h2 class="text-4xl font-semibold text-[#1e293b] mb-4">Contact</h2>
-            <p class="mb-4">Discutons de tes projets ou d'une collaboration !</p>
-            <form class="max-w-lg mx-auto bg-white p-6 rounded-xl shadow-lg space-y-4 border-t-4 border-cyan-400">
-                <input type="text" placeholder="Nom" class="w-full p-3 rounded border focus:outline-none focus:ring-2 focus:ring-cyan-400 transition">
-                <input type="email" placeholder="Email" class="w-full p-3 rounded border focus:outline-none focus:ring-2 focus:ring-cyan-400 transition">
-                <textarea placeholder="Votre message" rows="4" class="w-full p-3 rounded border focus:outline-none focus:ring-2 focus:ring-cyan-400 transition"></textarea>
-                <button type="submit" class="w-full bg-cyan-400 text-[#1e293b] py-3 rounded hover:bg-cyan-500 transition font-semibold">Envoyer</button>
-            </form>
-            <div class="flex justify-center space-x-4 mt-6 text-2xl">
-                <a href="https://linkedin.com/in/ebanafidel" target="_blank"><i class="fab fa-linkedin text-cyan-500 hover:text-cyan-400"></i></a>
-                <a href="https://github.com/ebanafidel" target="_blank"><i class="fab fa-github text-[#1e293b] hover:text-cyan-400"></i></a>
-                <a href="https://twitter.com/ebanafidel" target="_blank"><i class="fab fa-twitter text-cyan-400 hover:text-cyan-500"></i></a>
-                <a href="https://instagram.com/ebanafidel" target="_blank"><i class="fab fa-instagram text-pink-400 hover:text-pink-500"></i></a>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-[#1e293b] text-white text-center py-6 mt-16 animate-fade-up animate-duration-1000">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-            <div>&copy; 2025 EBANA Fidel Plamedi. Tous droits réservés.</div>
-            <div class="mt-2 md:mt-0">
-                <span class="mr-2">Portfolio réalisé avec TailwindCSS</span>
-                <a href="https://github.com/Ebana27/ebanafidel" class="underline text-cyan-400 hover:text-cyan-500">Code source</a>
-            </div>
+  <!-- HEADER Responsive DaisyUI -->
+  <header class="navbar bg-gray-800 text-yellow-400 shadow-lg fixed w-full z-50">
+    <div class="navbar-start">
+      <a class="btn btn-ghost normal-case text-xl font-bold">EBANA FP</a>
+    </div>
+    <div class="navbar-end">
+      <div class="hidden md:flex space-x-4">
+        <a href="#about" class="btn btn-ghost text-yellow-300">À propos</a>
+        <a href="#projects" class="btn btn-ghost text-yellow-300">Projets</a>
+        <a href="#skills" class="btn btn-ghost text-yellow-300">Compétences</a>
+        <a href="#contact" class="btn btn-ghost text-yellow-300">Contact</a>
+      </div>
+      <!-- Menu hamburger DaisyUI -->
+      <div class="md:hidden">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost btn-circle">
+            <i class="fa fa-bars text-xl"></i>
+          </label>
+          <ul tabindex="0" class="dropdown-content menu menu-compact mt-3 p-2 shadow bg-gray-800 rounded-box w-52">
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
-    </footer>
+      </div>
+    </div>
+  </header>
 
-    <!-- SLIDER JS -->
-    <script>
-        // Projets (exemples)
-        const projects = [
-            {
-                title: "EBANA Boutique",
-                desc: "Développement d'une plateforme e-commerce moderne, intégrant paiement et gestion des stocks.",
-                img: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=500&q=80",
-                link: "https://github.com/Ebana27/Ebana-Boutique-officiel"
-            },
-            {
-                title: "Quizana",
-                desc: "App de quiz intéractive pour étudiants, scores et classements en temps réel.",
-                img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=500&q=80",
-                link: "https://github.com/Ebana27/Quizana"
-            },
-            {
-                title: "SimpleNews",
-                desc: "Application d’actualité locale et internationale rapide et responsive.",
-                img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80",
-                link: "https://github.com/Ebana27/SimpleNews"
-            },
-            // Ajoute ici d'autres projets si besoin
-        ];
+  <main class="pt-24">
+    <!-- HERO -->
+    <section class="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-yellow-100 text-center">
+      <img src="https://avatars.githubusercontent.com/u/104888917?v=4" alt="photo profil" class="rounded-full w-36 h-36 border-4 border-yellow-400 shadow-xl mb-6">
+      <h1 class="text-5xl font-bold text-yellow-400">EBANA Fidel Plamedi</h1>
+      <p class="mt-4 text-lg text-gray-100">Développeur Web & Mobile | Designer Graphique</p>
+      <a href="#contact" class="mt-8 btn btn-warning btn-wide shadow-lg font-bold">Me contacter</a>
+    </section>
 
-        function fadeIn(element) {
-            element.style.opacity = 0;
-            setTimeout(() => {
-                element.style.transition = "opacity 0.7s";
-                element.style.opacity = 1;
-            }, 100);
-        }
-        function showRandomProject() {
-            const project = projects[Math.floor(Math.random() * projects.length)];
-            const card = document.getElementById('slider-card');
-            card.innerHTML = `
-                <img src="${project.img}" alt="${project.title}" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-cyan-500 mb-2">${project.title}</h3>
-                    <p class="text-gray-600 mb-4">${project.desc}</p>
-                    <a href="${project.link}" target="_blank" class="inline-block px-4 py-2 bg-cyan-400 text-[#1e293b] rounded hover:bg-cyan-500 transition font-semibold">Voir le projet</a>
-                </div>
-            `;
-            fadeIn(card);
-        }
-        showRandomProject();
-        setInterval(showRandomProject, 60000);
-    </script>
+    <!-- ABOUT -->
+    <section id="about" class="container mx-auto my-16 px-4">
+      <h2 class="text-4xl font-semibold text-yellow-400 mb-4">À propos de moi</h2>
+      <div class="card bg-gray-800 shadow-lg p-6">
+        <p class="text-gray-200 text-lg">
+          Jeune développeur & designer basé à Brazzaville. Je crée des apps et sites modernes, accessibles et bien designés.
+        </p>
+      </div>
+    </section>
 
-    <!-- Animations custom -->
-    <style>
-        @keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
-        @keyframes fadeDown {from {transform: translateY(-40px); opacity:0;} to {transform: translateY(0); opacity:1;}}
-        @keyframes fadeUp {from {transform: translateY(40px); opacity:0;} to {transform: translateY(0); opacity:1;}}
-        @keyframes scaleIn {from {transform: scale(0.5);} to {transform: scale(1);}}
-        .animate-fade-in { animation: fadeIn 1s both; }
-        .animate-fade-down { animation: fadeDown 1s both; }
-        .animate-fade-up { animation: fadeUp 1s both; }
-        .animate-scale-in { animation: scaleIn 0.8s both; }
-        .animate-bounce { animation: bounce 2s infinite; }
-        .animate-pulse { animation: pulse 2s infinite; }
-        .animate-duration-1000 { animation-duration: 1s;}
-        .animate-delay-300 { animation-delay: 0.3s;}
-        .animate-delay-500 { animation-delay: 0.5s;}
-        .animate-delay-700 { animation-delay: 0.7s;}
-        .animate-delay-900 { animation-delay: 0.9s;}
-        .animate-delay-1100 { animation-delay: 1.1s;}
-        .animate-delay-1300 { animation-delay: 1.3s;}
-    </style>
+    <!-- BENTO PROJECTS Swiper.js -->
+    <section id="projects" class="container mx-auto my-16 px-4">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-4xl font-semibold text-yellow-400">Mes Projets</h2>
+        <a href="https://github.com/Ebana27?tab=repositories" target="_blank" class="btn btn-outline btn-warning">Voir tout</a>
+      </div>
+      <!-- Bento grid + Swiper carousel -->
+      <div class="bento-grid">
+        <!-- Swiper - chaque bento = un projet -->
+        <div class="bg-gray-800 rounded-xl shadow-lg p-4 col-span-2">
+          <div class="swiper project-swiper">
+            <div class="swiper-wrapper">
+              <!-- Projet 1 -->
+              <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=500&q=80" class="rounded-lg w-full h-44 object-cover mb-2">
+                <h3 class="font-bold text-yellow-400 text-2xl">EBANA Boutique</h3>
+                <div class="text-gray-200">Développement, design, gestion de paiement.</div>
+                <span class="badge badge-warning mt-2">Développeur fullstack</span>
+                <p class="mt-2 text-gray-400 text-sm">Plateforme e-commerce moderne, gestion des stocks, interface admin.</p>
+                <a href="https://github.com/Ebana27/Ebana-Boutique-officiel" target="_blank" class="btn btn-sm btn-outline btn-warning mt-3">Voir le projet</a>
+              </div>
+              <!-- Projet 2 -->
+              <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=500&q=80" class="rounded-lg w-full h-44 object-cover mb-2">
+                <h3 class="font-bold text-yellow-400 text-2xl">Quizana</h3>
+                <div class="text-gray-200">Backend, UI/UX, scoring realtime.</div>
+                <span class="badge badge-warning mt-2">Lead Developer</span>
+                <p class="mt-2 text-gray-400 text-sm">App quiz avec classement, analytics, design interactif.</p>
+                <a href="https://github.com/Ebana27/Quizana" target="_blank" class="btn btn-sm btn-outline btn-warning mt-3">Voir le projet</a>
+              </div>
+              <!-- Projet 3 -->
+              <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" class="rounded-lg w-full h-44 object-cover mb-2">
+                <h3 class="font-bold text-yellow-400 text-2xl">SimpleNews</h3>
+                <div class="text-gray-200">Frontend, mobile, API actualités.</div>
+                <span class="badge badge-warning mt-2">Designer & Dév</span>
+                <p class="mt-2 text-gray-400 text-sm">Application d’actualité locale, notifications push, design mobile first.</p>
+                <a href="https://github.com/Ebana27/SimpleNews" target="_blank" class="btn btn-sm btn-outline btn-warning mt-3">Voir le projet</a>
+              </div>
+              <!-- Tu peux rajouter d'autres projets ici ! -->
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+        <!-- Autres cases bento personnalisées -->
+        <div class="bg-gray-800 rounded-xl shadow-lg p-4 flex flex-col justify-between">
+          <h4 class="font-bold text-yellow-400 text-xl mb-2">Projet coup de cœur</h4>
+          <p class="text-gray-200 mb-4">Découvrez mon projet préféré, où j'ai pu innover sur l'UX et la performance.</p>
+          <a href="https://github.com/Ebana27/SimpleNews" target="_blank" class="btn btn-warning btn-sm self-end">Voir</a>
+        </div>
+        <div class="bg-gray-800 rounded-xl shadow-lg p-4 flex flex-col justify-between">
+          <h4 class="font-bold text-yellow-400 text-xl mb-2">Projet design</h4>
+          <p class="text-gray-200 mb-4">UI/UX Design, Figma, illustrations pour startups et associations.</p>
+          <a href="#" class="btn btn-warning btn-sm self-end">Voir</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES avec icônes DaisyUI -->
+    <section id="skills" class="container mx-auto my-16 px-4">
+      <h2 class="text-4xl font-semibold text-yellow-400 mb-4">Compétences</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="flex items-center gap-2 badge badge-outline badge-warning px-4 py-3 text-lg">
+          <i class="fab fa-html5 text-orange-400 text-2xl"></i> HTML5
+        </div>
+        <div class="flex items-center gap-2 badge badge-outline badge-warning px-4 py-3 text-lg">
+          <i class="fab fa-css3-alt text-blue-400 text-2xl"></i> CSS3
+        </div>
+        <div class="flex items-center gap-2 badge badge-outline badge-warning px-4 py-3 text-lg">
+          <i class="fab fa-js text-yellow-400 text-2xl"></i> JavaScript
+        </div>
+        <div class="flex items-center gap-2 badge badge-outline badge-warning px-4 py-3 text-lg">
+          <i class="fab fa-react text-cyan-400 text-2xl"></i> React.js
+        </div>
+        <div class="flex items-center gap-2 badge badge-outline badge-warning px-4 py-3 text-lg">
+          <i class="fab fa-git-alt text-red-400 text-2xl"></i> Git/GitHub
+        </div>
+        <div class="flex items-center gap-2 badge badge-outline badge-warning px-4 py-3 text-lg">
+          <i class="fa fa-paint-brush text-pink-400 text-2xl"></i> Figma
+        </div>
+        <div class="flex items-center gap-2 badge badge-outline badge-warning px-4 py-3 text-lg">
+          <i class="fab fa-node-js text-green-400 text-2xl"></i> Node.js
+        </div>
+        <div class="flex items-center gap-2 badge badge-outline badge-warning px-4 py-3 text-lg">
+          <i class="fa fa-fire text-orange-400 text-2xl"></i> Firebase
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT DaisyUI -->
+    <section id="contact" class="container mx-auto my-16 px-4">
+      <h2 class="text-4xl font-semibold text-yellow-400 mb-4">Contact</h2>
+      <form class="max-w-lg mx-auto bg-gray-800 p-6 rounded-xl shadow-lg space-y-4">
+        <input type="text" placeholder="Nom" class="input input-bordered w-full bg-gray-900 text-yellow-300">
+        <input type="email" placeholder="Email" class="input input-bordered w-full bg-gray-900 text-yellow-300">
+        <textarea placeholder="Votre message" rows="4" class="textarea textarea-bordered w-full bg-gray-900 text-yellow-300"></textarea>
+        <button type="submit" class="btn btn-warning w-full font-bold">Envoyer</button>
+      </form>
+      <div class="flex justify-center space-x-4 mt-6 text-2xl">
+        <a href="https://linkedin.com/in/ebanafidel" target="_blank"><i class="fab fa-linkedin text-blue-400 hover:text-yellow-400"></i></a>
+        <a href="https://github.com/ebanafidel" target="_blank"><i class="fab fa-github text-yellow-400 hover:text-yellow-500"></i></a>
+        <a href="https://twitter.com/ebanafidel" target="_blank"><i class="fab fa-twitter text-blue-400 hover:text-yellow-400"></i></a>
+        <a href="https://instagram.com/ebanafidel" target="_blank"><i class="fab fa-instagram text-pink-400 hover:text-yellow-400"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER DaisyUI -->
+  <footer class="footer footer-center p-6 bg-gray-800 text-yellow-300 font-semibold">
+    <div>
+      <p>&copy; 2025 EBANA Fidel Plamedi. Tous droits réservés.</p>
+      <p>
+        Portfolio réalisé avec
+        <a href="https://tailwindcss.com/" class="underline text-yellow-400">TailwindCSS</a>,
+        <a href="https://daisyui.com/" class="underline text-yellow-400">DaisyUI</a>,
+        <a href="https://swiperjs.com/" class="underline text-yellow-400">Swiper.js</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Swiper.js + GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script>
+    // Swiper projects carousel
+    var swiper = new Swiper('.project-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      autoplay: { delay: 5000, disableOnInteraction: false }, // Change every 5s
+      effect: 'slide'
+    });
+
+    // GSAP animation on scroll (exemple simple)
+    gsap.from("section", {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      stagger: 0.3,
+      scrollTrigger: {
+        trigger: "section",
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true,
+      }
+    });
+  </script>
 </body>
 </html>
